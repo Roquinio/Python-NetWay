@@ -46,3 +46,7 @@ def getWindow():
     window.mainloop()
 
 getWindow()
+
+
+def logSession():
+    
