@@ -17,7 +17,6 @@ def getWindow():
     window.config(background="#cce6aa")
 
     # Frame
-
     frame= Frame(window, bg="#cce6aa")
 
     # Titre
@@ -32,11 +31,20 @@ def getWindow():
     canvas.create_image(width/2, height/2, image=img)
     canvas.pack(expand=YES, side=BOTTOM)
 
-    # Bouton Connexion
+    # Champs login
+    login_entry = Entry(frame, font=("Calibri", 25), bg="white", fg="#9bb07f")
+    login_entry.insert(0, "Login")
+    login_entry.pack()
     
+    # Champs Mot de passe
+    passwd_entry = Entry(frame, font=("Calibri", 25), bg="white", fg="#9bb07f")
+    passwd_entry.insert(0, "Mot de passe")
+    passwd_entry.config(show="*")
+    passwd_entry.pack()
+
+    # Bouton Connexion
     log_button = Button(frame, text="Se connecter", font=("Calibri", 25), bg="white", fg="#9bb07f")
     log_button.pack(pady=25, fill=X)
-
 
 
     # Ajout de la frame
@@ -48,5 +56,5 @@ def getWindow():
 getWindow()
 
 
-def logSession():
+
     
