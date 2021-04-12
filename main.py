@@ -37,12 +37,12 @@ def getWindow():
 
     # Champs login
     login_entry = Entry(frameLog, font=("Calibri", 25), bg="white", fg="#9bb07f")
-    login_entry.insert(0, "Baptiste")
+    login_entry.insert(0, "Login")
     login_entry.pack()
     
     # Champs Mot de passe
     passwd_entry = Entry(frameLog, font=("Calibri", 25), bg="white", fg="#9bb07f")
-    passwd_entry.insert(0, "ESGIProjet123!")
+    passwd_entry.insert(0, "Mot de passe")
     passwd_entry.config(show="*")
     passwd_entry.pack()
 
@@ -63,6 +63,7 @@ def getWindow():
             if connexion.is_connected():
                 logged_title = Label(frameLogged, text="Bienvenue" + login_value + "!", font=("Calibri", 40), bg="black", fg="white")
                 logged_title.pack()
+                frameLogged.pack(expand=YES)
                 
         
         except Error as e:
@@ -75,7 +76,7 @@ def getWindow():
         
 
     # Bouton Connexion
-    log_button = Button(frameLog, text="Se connecter", font=("Calibri", 25), bg="white", fg="#9bb07f", command = logSession(login_entry, passwd_entry))
+    log_button = Button(frameLog, text="Se connecter", font=("Calibri", 25), bg="white", fg="#9bb07f", command = lambda : logSession(login_entry, passwd_entry))
     log_button.pack(pady=25, fill=X)
 
 
