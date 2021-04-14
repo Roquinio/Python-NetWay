@@ -67,10 +67,11 @@ def getWindow():
                 logged_title.pack(expand=YES, side=TOP)
                 
                 connexion_cursor= connexion.cursor()
-                connexion_cursor.execute("SELECT nom FROM Administrateur_Supreme WHERE nom="+ login_value +"")
+                connexion_req= "SELECT nom FROM Administrateur_Supreme WHERE nom='%s'" %login_value
+                connexion_cursor.execute(connexion_req)
                 user_role = connexion_cursor.fetchall()
                 
-                logged_label = Label(frameLogged, text="Vous etes un " + user_role + " !" )
+                logged_label = Label(frameLogged, text=user_role )
                 logged_label.pack(expand=YES)
                 
                 canvas = Canvas(frameLogged, width=width, height=height, bg="#cce6aa", bd=0, highlightthickness=0)
