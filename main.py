@@ -67,9 +67,10 @@ def getWindow():
                 logged_title.pack(expand=YES, side=TOP)
                 
                 connexion_cursor= connexion.cursor()
-                connexion_req= "SELECT nom FROM Administrateur_Supreme WHERE nom='%s'" %login_value
+                connexion_req= "SELECT prenom,role FROM All_Users WHERE prenom='%s'" %login_value
                 connexion_cursor.execute(connexion_req)
-                user_role = connexion_cursor.fetchall()
+                connexion_data = connexion_cursor.fetchall()
+                for (role) in connexion_cursor : print(role) 
                 
                 logged_label = Label(frameLogged, text=user_role )
                 logged_label.pack(expand=YES)
