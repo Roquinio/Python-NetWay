@@ -69,10 +69,9 @@ def getWindow():
                 connexion_cursor= connexion.cursor()
                 connexion_req= "SELECT prenom,role FROM All_Users WHERE prenom='%s'" %login_value
                 connexion_cursor.execute(connexion_req)
-                connexion_data = connexion_cursor.fetchall()
-                for (role) in connexion_cursor : print(role) 
                 
-                logged_label = Label(frameLogged, text=user_role )
+                
+                logged_label = Label(frameLogged, text="null" )
                 logged_label.pack(expand=YES)
                 
                 canvas = Canvas(frameLogged, width=width, height=height, bg="#cce6aa", bd=0, highlightthickness=0)
