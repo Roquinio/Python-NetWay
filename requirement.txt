@@ -1,0 +1,9 @@
+flask
+connexion
+sockets
+datetime
+Flask-SQLAlchemy
+Flask-login
+flask-marshmallow
+marshmallow-sqlalchemy
+marshmallow
