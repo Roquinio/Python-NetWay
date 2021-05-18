@@ -42,7 +42,7 @@ def getWindow():
     
     # Champs Mot de passe
     passwd_entry = Entry(frameLog, font=("Calibri", 25), bg="white", fg="#9bb07f")
-    passwd_entry.insert(0, "ESGIProjet123!")
+    passwd_entry.insert(0, "*******")
     passwd_entry.config(show="*")
     passwd_entry.pack()
 
