@@ -11,3 +11,15 @@ Côté client nous retrouvons une application GUI sous TKinter offrant à l'util
 - Activation de script sur des machines distantes (Créations et rotations de log d'un serveur FTP)
 
 Côté serveur, cela est geré par le framework Flask et SQLite pour les requêtes de base de données.
+
+
+
+Pour utiliser notre application, c'est très simple : 
+
+>Posseder Python 3.7 disponible [içi] (https://www.python.org/downloads/)
+
+`git clone https://github.com/Yahbs/Python-NetWay.git`
+
+Ensuite vous devez exécuter le fichier _main.py_
+
+VOus voilà désormais prêts à vous connecter à la plateforme. Enjoy !
