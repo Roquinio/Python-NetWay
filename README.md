@@ -16,7 +16,7 @@ Côté serveur, cela est geré par le framework Flask et SQLite pour les requêt
 
 Pour utiliser notre application, c'est très simple : 
 
->Posseder Python 3.7 
+>Posséder Python 3.7 
 
 `git clone https://github.com/Yahbs/Python-NetWay.git`
 
