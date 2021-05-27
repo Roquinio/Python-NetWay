@@ -18,8 +18,6 @@ Pour utiliser notre application, c'est très simple :
 
 >Posseder Python 3.7 
 
-disponible [içi] (https://www.python.org/downloads/ "içi")
-
 `git clone https://github.com/Yahbs/Python-NetWay.git`
 
 Ensuite vous devez exécuter le fichier _main.py_
