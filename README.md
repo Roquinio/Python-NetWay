@@ -22,4 +22,6 @@ Pour utiliser notre application, c'est très simple :
 
 Ensuite vous devez exécuter le fichier _main.py_
 
+`python3 main.py`
+
 Vous voilà désormais prêts à vous connecter à la plateforme. Enjoy !
