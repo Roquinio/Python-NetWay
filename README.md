@@ -16,10 +16,12 @@ Côté serveur, cela est geré par le framework Flask et SQLite pour les requêt
 
 Pour utiliser notre application, c'est très simple : 
 
->Posseder Python 3.7 disponible [içi] (https://www.python.org/downloads/)
+>Posseder Python 3.7 
+
+disponible [içi] (https://www.python.org/downloads/)
 
 `git clone https://github.com/Yahbs/Python-NetWay.git`
 
 Ensuite vous devez exécuter le fichier _main.py_
 
-VOus voilà désormais prêts à vous connecter à la plateforme. Enjoy !
+Vous voilà désormais prêts à vous connecter à la plateforme. Enjoy !
