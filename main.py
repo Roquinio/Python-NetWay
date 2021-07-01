@@ -3,7 +3,6 @@
 from tkinter import *
 import socket
 import threading
-
 import datetime
 import hashlib
 import mysql.connector
