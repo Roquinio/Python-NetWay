@@ -10,7 +10,7 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/login')
 def login():
-    return render_template('login.html', name=current_user.name , role=current_user.role)
+    return render_template('login.html')
 
 @auth.route('/login', methods=['POST'])
 def login_post():
