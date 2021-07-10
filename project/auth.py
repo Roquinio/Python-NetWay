@@ -40,8 +40,8 @@ def login_post():
         login_user(user, remember=remember)
         return redirect(url_for('main.profile3'))
     
-    login_user(user, remember=remember)
-    return redirect(url_for('main.profile'))
+"""     login_user(user, remember=remember)
+    return redirect(url_for('main.profile')) """
 
 @auth.route('/signup')
 def signup():
