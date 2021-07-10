@@ -16,15 +16,15 @@ def profile():
 
 @main.route('/profile1')
 @login_required
-def profile():
+def profile1():
     return render_template('as.html', name=current_user.name, role=current_user.role)
 
 @main.route('/profile2')
 @login_required
-def profile():
+def profile2():
     return render_template('admin.html', name=current_user.name, role=current_user.role)
 
 @main.route('/profile3')
 @login_required
-def profile():
+def profile3():
     return render_template('user.html', name=current_user.name, role=current_user.role)
