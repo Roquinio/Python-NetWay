@@ -28,15 +28,15 @@ def login_post():
         return redirect(url_for('auth.login')) # if user doesn't exist or password is wrong, reload the page
 
     # if the above check passes, then we know the user has the right credentials
-    if role == Administrateur-Supreme : 
+    if role == "Administrateur-Supreme" : 
         login_user(user, remember=remember)
         return redirect(url_for('main.profile1'))
     
-    if role == Administrateur : 
+    if role == "Administrateur" : 
         login_user(user, remember=remember)
         return redirect(url_for('main.profile2'))
     
-    if role == User : 
+    if role == "User" : 
         login_user(user, remember=remember)
         return redirect(url_for('main.profile3'))
     
