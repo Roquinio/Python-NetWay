@@ -16,10 +16,10 @@ def login():
 def login_post():
     email = request.form.get('email')
     password = request.form.get('password')
-    role = request.form.get('role')
     remember = True if request.form.get('remember') else False
 
     user = User.query.filter_by(email=email).first()
+    
 
     # check if user actually exists
     # take the user supplied password, hash it, and compare it to the hashed password in database
@@ -28,15 +28,15 @@ def login_post():
         return redirect(url_for('auth.login')) # if user doesn't exist or password is wrong, reload the page
 
     # if the above check passes, then we know the user has the right credentials
-    if role == "Administrateur-Supreme" : 
+    if user.role == "Administrateur-Supreme" : 
         login_user(user, remember=remember)
         return redirect(url_for('main.profile1'))
     
-    if role == "Administrateur" : 
+    if user.role == "Administrateur" : 
         login_user(user, remember=remember)
         return redirect(url_for('main.profile2'))
     
-    if role == "User" : 
+    if user.role == "User" : 
         login_user(user, remember=remember)
         return redirect(url_for('main.profile3'))
     
