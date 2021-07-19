@@ -19,6 +19,7 @@ def login_post():
     remember = True if request.form.get('remember') else False
 
     user = User.query.filter_by(email=email).first()
+    role = user.role
     
 
     # check if user actually exists
@@ -28,15 +29,15 @@ def login_post():
         return redirect(url_for('auth.login')) # if user doesn't exist or password is wrong, reload the page
 
     # if the above check passes, then we know the user has the right credentials
-    if user.role == "Administrateur-Supreme" : 
+    if role == "Administrateur-Supreme" : 
         login_user(user, remember=remember)
         return redirect(url_for('main.profile1'))
     
-    if user.role == "Administrateur" : 
+    if role == "Administrateur" : 
         login_user(user, remember=remember)
         return redirect(url_for('main.profile2'))
     
-    if user.role == "User" : 
+    if role == "User" : 
         login_user(user, remember=remember)
         return redirect(url_for('main.profile3'))
     
