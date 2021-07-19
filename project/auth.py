@@ -33,7 +33,7 @@ def login_post():
         login_user(user, remember=remember)
         return redirect(url_for('main.profile1'))
     
-    if role == "Administrateur" : 
+    if role == "Administrateur-Classique" : 
         login_user(user, remember=remember)
         return redirect(url_for('main.profile2'))
     
