@@ -27,4 +27,4 @@ def profile2():
 @main.route('/profile3')
 @login_required
 def profile3():
-    return render_template('user.html', name=current_user.name, role=current_user.role)
+    return render_template('User.html', name=current_user.name, role=current_user.role)
