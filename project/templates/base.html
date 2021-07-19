@@ -22,15 +22,15 @@
                             <a href="{{ url_for('main.index') }}" class="navbar-item">
                                 Accueil
                             </a>
-                            {% if user.role == "User" %}
+                            {% if role == "User" %}
                                 <a href="{{ url_for('main.profile3') }}" class="navbar-item">
                                 Profil
                                 </a>
-                            {% elif user.role == "Administrateur-Classique" %}
+                            {% elif role == "Administrateur-Classique" %}
                                 <a href="{{ url_for('main.profile2') }}" class="navbar-item">
                                 Profil
                                 </a>
-                            {% else user.role == "Administrateur-Supreme" %}
+                            {% else role == "Administrateur-Supreme" %}
                                 <a href="{{ url_for('main.profile1') }}" class="navbar-item">
                                 Profil                             
                                 </a>
