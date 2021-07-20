@@ -91,6 +91,7 @@ def changement_post():
     new1 = request.form.get('new1')
     new2 = request.form.get('new2')
     email_pwd = current_user.email
+    flash (email_pwd)
     
     if new1 != new2:
         flash('Les mots de passe sont differents')
