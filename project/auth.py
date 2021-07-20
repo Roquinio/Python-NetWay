@@ -84,7 +84,7 @@ def changement():
     return render_template('password-change.html')
 
 
-@auth.route('/password-change', methods=['POST']))
+@auth.route('/password-change', methods=['POST'])
 @login_required
 def changement_post():
     old_pwd = request.form.get('old')
