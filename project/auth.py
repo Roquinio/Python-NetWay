@@ -101,7 +101,7 @@ def changement_post():
     if not check_password_hash(test_pwd.password, old_pwd): 
         flash('Mot de passe incorrect')
     
-    change_pwd = User.query.filter_by(email=email_pwd).update(dict(password=generate_password_hash(new2, method='sha256')))
+    change_pwd = User.query.filter_by(email=email_pwd).update({User.password: generate_password_hash(new2, method='sha256') })
     
     db.session.add(change_pwd)
     db.session.commit()
