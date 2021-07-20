@@ -106,4 +106,4 @@ def changement_post():
 
     db.session.commit()
     
-    return redirect(url_for('auth.html'))
+    return redirect(url_for('auth.login'))
