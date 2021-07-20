@@ -102,6 +102,6 @@ def changement_post():
     
     change_pwd = User.query.filter_by(email=email_pwd).update(dict(password=generate_password_hash(new2, method='sha256')))
     
-    db.session.commit(change_pwd)
+    db.session.merge(change_pwd)
     
     return redirect(url_for('auth.html'))
