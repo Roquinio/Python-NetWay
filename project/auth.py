@@ -113,5 +113,8 @@ def changement_post():
 
 @auth.route('/management')
 def mngt():
-    scrap = User.query(id, name, email, role).all()
+    scrap = User.query(id).all()
+    for row in scrap:
+        print("Id: ",id.row,"Nom: ",name.row,"E-mail: ",email.row,"Role",role.row)
+        
     return render_template('mngt.html')
