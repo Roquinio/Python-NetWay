@@ -7,3 +7,4 @@ Flask-login
 flask-marshmallow
 marshmallow-sqlalchemy
 marshmallow
+flask-change-password
