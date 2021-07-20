@@ -95,6 +95,8 @@ def changement_post():
     
     if new1 != new2:
         flash('Les mots de passe sont differents')
+        return redirect(url_for('auth.changement'))
+        
     
     test_pwd = User.query.filter_by(email=email_pwd).first()
     
