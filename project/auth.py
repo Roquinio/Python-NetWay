@@ -94,13 +94,12 @@ def changement_post():
     flash (email_pwd)
     
     if new1 != new2:
-        render_template('password-change.html')
         flash('Les mots de passe sont differents')
     
     test_pwd = User.query.filter_by(email=email_pwd).first()
     
     if not check_password_hash(test_pwd.password, old_pwd): 
-            flash('Mot de passe incorrect')
+        flash('Mot de passe incorrect')
     
     change_pwd = User.query.filter_by(email=email_pwd).update(dict(password=generate_password_hash(new2, method='sha256')))
     
