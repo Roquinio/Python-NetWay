@@ -28,8 +28,5 @@ def profile2():
 @login_required
 def profile3():
     return render_template('User.html', name=current_user.name, role=current_user.role)
-
-@main.route('/password-change')
-@login_required
-def passwordchange():
-    return render_template('password-change.html')
+    
+    

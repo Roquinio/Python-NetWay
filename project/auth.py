@@ -103,4 +103,3 @@ def changement_post():
     db.session.commit(change_pwd)
     
     return redirect(url_for('auth.html'))
-    
