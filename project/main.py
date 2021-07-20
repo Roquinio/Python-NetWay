@@ -28,5 +28,7 @@ def profile2():
 @login_required
 def profile3():
     return render_template('User.html', name=current_user.name, role=current_user.role)
-    
-    
+
+@main.route('/management')
+def mngt():
+    return render_template('mngt.html')
