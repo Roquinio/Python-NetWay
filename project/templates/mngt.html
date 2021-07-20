@@ -14,7 +14,15 @@
         <th><abbr title="email">E-mail</abbr></th>
         <th><abbr title="role">Role</abbr></th>
       </tr>
+
+      {% for user in scrap %}
+             <tr><td>{{ user }}</td></tr>
+         {% endfor %}
     </thead>
+
+
 </table>
+
+
 
 {% endblock %}

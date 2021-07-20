@@ -109,3 +109,15 @@ def changement_post():
     db.session.commit()
     
     return redirect(url_for('auth.login'))
+
+
+@auth.route('/management')
+def mngt():
+    scrap = User.query(id, name, email, role).all()
+    for user in scrap:
+        print user.id
+        print user.name
+        print user.email
+        print user.role
+        
+    return render_template('mngt.html')
