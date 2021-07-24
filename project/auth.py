@@ -120,4 +120,4 @@ def mngt():
     mail = User.query.with_entities(User.email).all()
     role = User.query.with_entities(User.role).all()
     
-    return render_template('mngt.html', ids=ids, nom=nom, mail=mail, role=role )
+    return render_template('mngt.html', ids=ids, nom=nom, mail=mail, role=role, zip=zip )
