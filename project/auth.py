@@ -113,7 +113,7 @@ def changement_post():
 
 @auth.route('/management')
 def mngt():
-    scrap = User.query.with_entities(User.name).all()
+    scrap = User.query.with_entities(User.id).all()
     ''' for row in scrap:
         print("Id: ",id.row,"Nom: ",name.row,"E-mail: ",email.row,"Role",role.row)
          '''
