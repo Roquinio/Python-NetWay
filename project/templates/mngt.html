@@ -2,6 +2,15 @@
 
 {% block content %}
 
+<div class="box">
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+      <div class="notification is-danger">
+        <p>{{ messages[1] }}</p>  
+      </div>
+  {% endif %}
+  {% endwith %}
+</div>
 
 
   <div class="columns is-mobile is-centered">
@@ -40,10 +49,7 @@
   <button class="button is-danger">Supprimer</button>
 
 </div>
-
-  </div>
-  </div>
-
+<form method="POST" action="/mngt">
 <div class="select is-danger">
   <select name="suppr">
   {% for row in mail %}
@@ -51,6 +57,12 @@
   {% endfor %}
   </select>
 </div>
+</form>
+
+  </div>
+  </div>
+
+
 
 
 

@@ -127,4 +127,8 @@ def mngt():
 @auth.route('/management', methods=['POST'])
 def mngt_post():
     
-    return render_template('mngt.html', ids=ids, nom=nom, mail=mail, role=role, zip=zip )
+    suppr=request.form.get('suppr')
+    flash(suppr,'a été supprimé')
+    
+    
+    return render_template(url_for('auth.mngt'))
