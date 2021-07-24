@@ -131,4 +131,4 @@ def mngt_post():
     flash(suppr,'a été supprimé')
     
     
-    return render_template(url_for('auth.management'))
+    return render_template(url_for('auth.mngt'))
