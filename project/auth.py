@@ -127,7 +127,8 @@ def mngt():
 @auth.route('/management', methods=['POST'])
 def mngt_post():
     
-    suppr=request.form.get('suppr')
+    mail=request.form.get('suppr')
+    suppr=User.query.filter_by(email=mail).first()
     db.session.delete(suppr)
     db.session.commit()
     flash(suppr,'a été supprimé')
