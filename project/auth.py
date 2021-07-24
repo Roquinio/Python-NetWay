@@ -131,7 +131,12 @@ def management_post():
     User.query.filter_by(email=email).delete()
     db.session.commit()
     flash(email,'a été supprimé')
+
+    ids = User.query.with_entities(User.id).all()
+    nom = User.query.with_entities(User.name).all()
+    mail = User.query.with_entities(User.email).all()
+    role = User.query.with_entities(User.role).all()
     
     
-    return render_template('mngt.html')
+    return render_template('mngt.html', ids=ids, nom=nom, mail=mail, role=role, zip=zip )
 
