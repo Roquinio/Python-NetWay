@@ -133,5 +133,5 @@ def management_post():
     flash(email,'a été supprimé')
     
     
-    return render_template(url_for ('auth.management'))
+    return render_template('mngt.html')
 
