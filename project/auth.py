@@ -117,4 +117,4 @@ def mngt():
     ''' for row in scrap:
         print("Id: ",id.row,"Nom: ",name.row,"E-mail: ",email.row,"Role",role.row)
          '''
-    return render_template('mngt.html')
+    return render_template('mngt.html', scrap=scrap)
