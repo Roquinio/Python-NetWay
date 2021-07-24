@@ -135,3 +135,4 @@ def mngt_post():
     
     
     return render_template(url_for ('auth.mngt'))
+
