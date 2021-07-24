@@ -126,12 +126,6 @@ def management():
 @auth.route('/management', methods=['POST'])
 def management_post():
     
-    ids = User.query.with_entities(User.id).all()
-    nom = User.query.with_entities(User.name).all()
-    mail = User.query.with_entities(User.email).all()
-    role = User.query.with_entities(User.role).all()
-    
-    
     email=request.form.get('suppr')
     
     User.query.filter_by(email=email).delete()
@@ -141,5 +135,5 @@ def management_post():
 
     
     
-    return render_template('mngt.html', ids=ids, nom=nom, mail=mail, role=role, zip=zip )
+    return redirect(url_for('auth.login'))
 
