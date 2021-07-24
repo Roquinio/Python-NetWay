@@ -16,19 +16,29 @@
       </tr>
 
 
-       {% for row in scrap %}
+       {% for row in ids %}
              <tr><td>{{ row }}</td></tr>
          {% endfor %}
+
+        {% for row in nom %}
+         <tr><td>{{ row }}</td></tr>
+        {% endfor %}
+
+        {% for row in mail %}
+        <tr><td>{{ row }}</td></tr>
+        {% endfor %}
+
+        {% for row in role %}
+        <tr><td>{{ row }}</td></tr>
+        {% endfor %}
+
+
  
     </thead>
 </table>
-<div>
-    {{ scrap }}
-</div>
 
 
 
 
-{{ scrap }}
 
 {% endblock %}
