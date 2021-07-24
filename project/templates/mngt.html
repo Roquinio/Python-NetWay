@@ -16,8 +16,14 @@
       </tr>
 
 
-       {% for row in ids,nom,mail,role %}
-             <tr><td>{{ row }}</td></tr>
+       {% for row1 row2 row3 row4 in ids,nom,mail,role %}
+             <tr><td> {{ row1 }} </td>
+                 <td> {{ row2}} </td>
+                 <td> {{ row3}} </td>
+                 <td> {{ row4}} </td>    
+            
+            
+            </tr>
          {% endfor %}
 
 <!--         {% for row in nom %}
