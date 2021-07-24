@@ -43,8 +43,7 @@ def login_post():
         login_user(user, remember=remember)
         return redirect(url_for('main.profile3'))
     
-"""     login_user(user, remember=remember)
-    return redirect(url_for('main.profile')) """
+
 
 @auth.route('/signup')
 def signup():
@@ -114,7 +113,7 @@ def changement_post():
 
 
 @auth.route('/management')
-def mngt():
+def management():
     ids = User.query.with_entities(User.id).all()
     nom = User.query.with_entities(User.name).all()
     mail = User.query.with_entities(User.email).all()
@@ -125,7 +124,7 @@ def mngt():
 
 
 @auth.route('/management', methods=['POST'])
-def mngt_post():
+def management_post():
     
     email=request.form.get('suppr')
     
