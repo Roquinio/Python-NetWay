@@ -128,6 +128,8 @@ def mngt():
 def mngt_post():
     
     suppr=request.form.get('suppr')
+    db.session.delete(suppr)
+    db.session.commit()
     flash(suppr,'a été supprimé')
     
     
