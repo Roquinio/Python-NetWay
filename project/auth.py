@@ -120,4 +120,11 @@ def mngt():
     mail = User.query.with_entities(User.email).all()
     role = User.query.with_entities(User.role).all()
     
+    
+    return render_template('mngt.html', ids=ids, nom=nom, mail=mail, role=role, zip=zip )
+
+
+@auth.route('/management', methods=['POST'])
+def mngt_post():
+    
     return render_template('mngt.html', ids=ids, nom=nom, mail=mail, role=role, zip=zip )
