@@ -128,10 +128,10 @@ def mngt():
 def mngt_post():
     
     mail=request.form.get('suppr')
-    suppr=User.query.filter_by(email=mail).first()
-    db.session.delete(suppr)
+    
+    User.query.filter_by(mail=mail).delete()
     db.session.commit()
-    flash(suppr,'a été supprimé')
+    flash(mail,'a été supprimé')
     
     
     return render_template(url_for('auth.mngt'))
