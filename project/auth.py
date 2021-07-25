@@ -6,6 +6,7 @@ from flask_login import login_user, logout_user, login_required, current_user
 from .models import User
 from . import db
 from itertools import *
+from .scanthread import scan
 
 
 auth = Blueprint('auth', __name__)
@@ -146,5 +147,7 @@ def management_post():
 @auth.route('/port')
 @login_required
 def scan_port():
-
-    return render_template('port.html')
+    
+    
+    
+    return render_template('port.html',scan=scan)
