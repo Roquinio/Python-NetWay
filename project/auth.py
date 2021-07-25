@@ -150,7 +150,7 @@ def management_post():
 def scan_port():
     
     scan()
-    sys.stdout = open('port.txt', "r")
+    sys.stdout = open('port.txt', "a+")
     read_scan=print(sys.stdout.read())
     
     return render_template('port.html', read_scan=read_scan)
