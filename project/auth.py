@@ -149,8 +149,8 @@ def management_post():
 @login_required
 def scan_port():
     
-    scan()
-    """ read_scan=print(sys.stdout.read()) """
-    read_scan=sys.stdout
+   """  scan()
+    read_scan=print(sys.stdout.read()) 
+    read_scan=sys.stdout """
     
-    return render_template('port.html', read_scan=read_scan)
+    return render_template('port.html', scan=scan)
