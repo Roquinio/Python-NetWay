@@ -7,6 +7,7 @@ from .models import User
 from . import db
 from itertools import *
 from .scanthread import scan
+import sys
 
 
 auth = Blueprint('auth', __name__)
@@ -148,6 +149,8 @@ def management_post():
 @login_required
 def scan_port():
     
+    scan()
+    sys.stdout = open('port.txt', "w")
+    read_scan=print(sys.stdout.read())
     
-    
-    return render_template('port.html',scan=scan)
+    return render_template('port.html',)
