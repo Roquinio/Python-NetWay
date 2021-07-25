@@ -114,13 +114,13 @@ def changement_post():
 
 @auth.route('/management')
 def management():
-    ids[0] = User.query.with_entities(User.id).all()
-    nom[0] = User.query.with_entities(User.name).all()
-    mail[0] = User.query.with_entities(User.email).all()
-    role[0] = User.query.with_entities(User.role).all()
+    ids = User.query.with_entities(User.id).all()
+    nom = User.query.with_entities(User.name).all()
+    mail = User.query.with_entities(User.email).all()
+    role = User.query.with_entities(User.role).all()
     
     
-    return render_template('mngt.html', ids=ids, nom=nom, mail=mail, role=role, zip=zip )
+    return render_template('mngt.html', ids=ids[0], nom=nom[0], mail=mail[0], role=role[0], zip=zip )
 
 
 @auth.route('/management', methods=['POST'])
