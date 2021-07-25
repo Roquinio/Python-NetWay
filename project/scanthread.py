@@ -42,6 +42,6 @@ def scan():
 
     q.join()
 
-print(list)
+
 scan()
 
