@@ -149,7 +149,7 @@ def management_post():
 @login_required
 def scan_port():
     
-    """scan()
+    """
     read_scan=print(sys.stdout.read()) 
     read_scan=sys.stdout """
     
