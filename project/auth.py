@@ -113,6 +113,7 @@ def changement_post():
 
 
 @auth.route('/management')
+@login_required
 def management():
     ids = User.query.with_entities(User.id).all()
     nom = User.query.with_entities(User.name).all()
@@ -124,6 +125,7 @@ def management():
 
 
 @auth.route('/management', methods=['POST'])
+@login_required
 def management_post():
     
     email=request.form.get('suppr')
@@ -140,3 +142,9 @@ def management_post():
     
     return redirect(url_for('auth.management'))
 
+
+@auth.route('/port')
+@login_required
+def scan_port():
+
+    return render_template('port.html')
