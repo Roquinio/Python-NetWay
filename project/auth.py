@@ -129,7 +129,7 @@ def management_post():
     email=request.form.get('suppr')
     
     """ User.query.filter_by(email=email).delete() """
-    delete=User.query.filter_by(email=email).first()
+    delete=User.query.filter_by(email=email)
     
     db.session.delete(delete)
     db.session.commit()
