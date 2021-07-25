@@ -14,11 +14,12 @@ def scan():
 
     def scan_range(port): # Création de la fonction scan
     
+        list = []
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Création d'un socket pour la connexion avec le serveur en local
         try:
             result = sock.connect_ex((target, port)) # Définir sur laquelle les ports vont écouter
             with print_lock:
-                print("Le port", port,"est ouvert !") # Indication des ports qui sont ouverts
+                list.append(port) # Indication des ports qui sont ouverts
             result.close()
         except:
             pass
@@ -40,5 +41,7 @@ def scan():
         q.put(worker)
 
     q.join()
-    
+
+print(list)
 scan()
+
