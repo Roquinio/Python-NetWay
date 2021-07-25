@@ -120,7 +120,7 @@ def management():
     role = User.query.with_entities(User.role).all()
     
     
-    return render_template('mngt.html', ids=ids[0], nom=nom[0], mail=mail[0], role=role[0], zip=zip )
+    return render_template('mngt.html', ids=ids, nom=nom, mail=mail, role=role, zip=zip )
 
 
 @auth.route('/management', methods=['POST'])
