@@ -128,7 +128,8 @@ def management_post():
     
     email=request.form.get('suppr')
     
-    User.query.filter_by(email=email).delete()
+    """ User.query.filter_by(email=email).delete() """
+    db.session.query(User).filter(User.email==email).delete()
     db.session.commit()
     flash(email,'a été supprimé')
 
