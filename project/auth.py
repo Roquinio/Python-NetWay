@@ -126,7 +126,8 @@ def management():
 @auth.route('/management', methods=['POST'])
 def management_post():
     
-    email=request.form.get('suppr')
+    get_mail=request.form.get('suppr')
+    email=get_mail[0]
     
     """ User.query.filter_by(email=email).delete() """
     suppr=User.query.filter_by(email=email).first()
