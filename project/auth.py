@@ -137,7 +137,7 @@ def management_post():
     flash(email,'a été supprimé')
 
 
+
     
-    
-    return redirect(url_for('auth.login'))
+    return redirect(url_for('auth.management'))
 
