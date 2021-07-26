@@ -174,6 +174,8 @@ def ftp():
             file.save(os.path.join('/srv/Python-NetWay/project/ftp', filename))
             return redirect(url_for('auth.ftp', name=filename))
         
+    path = '/srv/Python-NetWay/project/ftp'
+    file = os.listdir(path)
+
         
-        
-    return render_template('ftp.html')
+    return render_template('ftp.html', file=file)
