@@ -172,7 +172,7 @@ def ftp():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join('/srv/Python-NetWay/project/ftp', filename))
-            return redirect(url_for('download_file', name=filename))
+            return redirect(url_for('auth.ftp', name=filename))
         
         
         
