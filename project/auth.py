@@ -155,3 +155,11 @@ def scan_port():
     read_scan=sys.stdout """
     
     return render_template('port.html', read_scan=read_scan)
+
+
+@auth.route('/ftp')
+@login_required
+def ftp():
+
+
+    return render_template('ftp.html')
