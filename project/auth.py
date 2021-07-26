@@ -12,7 +12,6 @@ import os
 from werkzeug.utils import secure_filename
 
 
-
 auth = Blueprint('auth', __name__)
 
 @auth.route('/login')
@@ -172,7 +171,7 @@ def ftp():
         file = request.files['file']
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            file.save(os.path.join('/srv/Python-NetWay/project/ftp', filename))
             return redirect(url_for('download_file', name=filename))
         
         
