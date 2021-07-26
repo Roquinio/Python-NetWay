@@ -23,7 +23,9 @@ def scan():
             result.close()
         except:
             pass
-
+        
+    
+    
     def threader (): # Définir le threading
         while True:
             worker = q.get()
@@ -42,6 +44,8 @@ def scan():
 
     q.join()
 
+    
+print(list)
+
 
 scan()
-
