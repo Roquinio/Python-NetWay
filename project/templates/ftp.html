@@ -4,13 +4,16 @@
 
 
 <h1 class="title">
-    Transfert de fichier
+    Transfert de fichiers
   </h1>
 
 
 
 <div class="box">
-
+    <form method=post enctype=multipart/form-data>
+        <input type=file name=file>
+        <input type=submit value=Upload>
+     
     <div class="file is-centered is-success has-name">
         <label class="file-label">
           <input class="file-input" type="file" name="resume">
@@ -21,8 +24,9 @@
           </span>
         </label>
       </div>
-      Envoi de fichier
-
+    </form>
+      Envoi de fichiers
+    
 
 </div>
 
@@ -35,7 +39,7 @@
 
 <div class="box">
 
-    Téléchargement
+    Téléchargements
 
 
 </div>
