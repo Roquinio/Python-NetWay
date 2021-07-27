@@ -182,7 +182,7 @@ def ftp():
         file_delete = str(request.form.get('suppr')) # Recuperation du nom du fichier à supprimer depuis l'entête HTML
         path_file = path + '/' + file_delete # Customisation du chemin des fichiers 
         os.remove(path_file) # Suppression du fichier
-        return redirect(url_for('auth.ftp')) # Actualisation de la page
+        return render_template('ftp.html', file=file) # Actualisation de la page
         
     return render_template('ftp.html', file=file)
 
