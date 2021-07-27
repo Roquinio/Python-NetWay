@@ -183,4 +183,4 @@ def ftp():
 @auth.route('/srv/Python-NetWay/project/ftp/<filename>')
 @login_required
 def files_download(filename):
-    return send_file('ftp'+filename)
+    return send_file('ftp/'+filename)
