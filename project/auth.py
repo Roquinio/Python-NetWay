@@ -178,6 +178,10 @@ def ftp():
     path = '/srv/Python-NetWay/project/ftp'
     file = os.listdir(path)
 
+    if request.method == 'POST' and request.form.get('suppr') is not False:
+        file_delete = str(request.form.get('suppr'))
+        path_file = path + '/' + file_delete
+        os.remove(path_file)
         
     return render_template('ftp.html', file=file)
 
