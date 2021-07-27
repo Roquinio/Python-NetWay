@@ -168,11 +168,11 @@ def allowed_file(filename): # Déclarations des exetensions de fichier autorisé
 @login_required
 def ftp():
     
-    if request.method == 'POST' and request.form.get('name') is not None: # Upload des fichiers : si dans l'entête HTTP le champs name est rempli, le IF continue
+    if request.method == 'POST' and request.form.get('name') is not None:
         file = request.files['file']
-        if file and allowed_file(file.filename): # Comparaison avec la fonction allowed_file qui check l'exetensions du fichier
+        if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            file.save(os.path.join('/srv/Python-NetWay/project/ftp', filename)) # Chemin auquel le fichier uploader sera stockés 
+            file.save(os.path.join('/srv/Python-NetWay/project/ftp', filename))
             return redirect(url_for('auth.ftp', name=filename))
         
     path = '/srv/Python-NetWay/project/ftp' # Mappage du dossier FTP
