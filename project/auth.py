@@ -168,7 +168,7 @@ def allowed_file(filename):
 @login_required
 def ftp():
     
-    if request.method == 'POST' and request.form.get('name') is not False:
+    if request.method == 'POST' and request.form.get('name') is not None:
         file = request.files['file']
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
@@ -178,7 +178,7 @@ def ftp():
     path = '/srv/Python-NetWay/project/ftp'
     file = os.listdir(path)
 
-    if request.method == 'POST' and request.form.get('suppr') is not False:
+    if request.method == 'POST' and request.form.get('suppr') is not None:
         file_delete = str(request.form.get('suppr'))
         path_file = path + '/' + file_delete
         os.remove(path_file)
