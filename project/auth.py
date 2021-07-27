@@ -178,7 +178,7 @@ def ftp():
     path = '/srv/Python-NetWay/project/ftp' # Mappage du dossier FTP
     file = os.listdir(path) # Liste des fichier dans la variable $path
 
-    if request.method == 'POST': # Suppressions des fichiers : si dans l'entête HTTP le champs suppr est rempli, le IF continue
+    if request.method == 'POST' and request.form.get('suppr') is not None: # Suppressions des fichiers : si dans l'entête HTTP le champs suppr est rempli, le IF continue
         file_delete = str(request.form.get('suppr')) # Recuperation du nom du fichier à supprimer depuis l'entête HTML
         path_file = path + '/' + file_delete # Customisation du chemin des fichiers 
         os.remove(path_file) # Suppression du fichier
