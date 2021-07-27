@@ -160,14 +160,14 @@ def scan_port():
 
 
 def allowed_file(filename):
-    ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+    ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif','docx'}
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @auth.route('/ftp', methods=['GET', 'POST'])
 @login_required
 def ftp():
-    if request.method == 'POST':
+    if request.method == 'POST' and request.form.get(name) is not False:
         file = request.files['file']
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
