@@ -26,7 +26,9 @@
     <div class="content">
         <ol type="1">
         {% for f in file %}
+            <a href="/srv/Python-NetWay/project/ftp/{{f}}" download>
             <li> {{f}} </li>
+            </a>
         {% endfor %}
         </ol>
     </div>
@@ -35,6 +37,22 @@
 <div class="box">
 
     Téléchargements
+
+    <form method="" action="/management">
+        <div class="select is-danger">
+          <select name="suppr">
+          {% for row in mail %}
+          <option> {{ row[0] }} </option>
+          {% endfor %}
+          </select>
+        </div>
+        
+        <div class="buttons">
+          <button class="button is-danger">Supprimer</button>
+        
+        </div>
+        
+        </form>
 
 
 </div>
