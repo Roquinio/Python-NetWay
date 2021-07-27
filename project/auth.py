@@ -182,6 +182,7 @@ def ftp():
         file_delete = str(request.form.get('suppr'))
         path_file = path + '/' + file_delete
         os.remove(path_file)
+        return render_template('ftp.html', file=file)
         
     return render_template('ftp.html', file=file)
 
