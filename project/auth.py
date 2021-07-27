@@ -168,7 +168,7 @@ def allowed_file(filename): # Déclarations des exetensions de fichier autorisé
 @login_required
 def ftp():
     
-    if request.method == 'POST':
+    if request.method == 'POST' and request.files['file'] is not None:
         file = request.files['file']
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
